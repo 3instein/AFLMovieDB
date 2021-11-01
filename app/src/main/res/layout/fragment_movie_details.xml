@@ -24,7 +24,7 @@
             <TextView
                 android:id="@+id/lbl_movie_details_title"
                 android:layout_width="0dp"
-                android:layout_height="61dp"
+                android:layout_height="55dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginEnd="8dp"
                 android:gravity="center"
@@ -32,6 +32,7 @@
                 android:textColor="#000000"
                 android:textSize="24sp"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/image_backdrop" />
 
@@ -48,7 +49,7 @@
             <ImageView
                 android:id="@+id/image_backdrop"
                 android:layout_width="0dp"
-                android:layout_height="178dp"
+                android:layout_height="170dp"
                 android:contentDescription="@string/backdrop"
                 android:scaleType="centerCrop"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -63,11 +64,10 @@
                 android:id="@+id/lbl_movie_details_poster"
                 android:layout_width="115dp"
                 android:layout_height="159dp"
-                android:layout_marginTop="16dp"
+                android:layout_marginTop="8dp"
                 android:contentDescription="@string/poster"
                 android:scaleType="fitXY"
                 app:layout_constraintEnd_toEndOf="@+id/image_backdrop"
-                app:layout_constraintHorizontal_bias="0.503"
                 app:layout_constraintStart_toStartOf="@+id/image_backdrop"
                 app:layout_constraintTop_toTopOf="parent"
                 tools:src="@drawable/ic_baseline_image_24" />
@@ -208,6 +208,22 @@
                 app:layout_constraintHorizontal_bias="0.498"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/lbl_movie_details_tagline"
+                android:layout_width="0dp"
+                android:layout_height="17dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="48dp"
+                android:layout_marginEnd="16dp"
+                android:gravity="center"
+                android:text="@string/sub_title"
+                android:textSize="12sp"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/lbl_movie_details_poster" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>

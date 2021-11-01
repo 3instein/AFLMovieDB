@@ -83,7 +83,7 @@ public class MovieDetailsFragment extends Fragment {
     private MovieViewModel viewModel;
     private RecyclerView rv_similar, rv_credit, rv_company;
     private ImageView backdrop, poster;
-    private TextView title, overview, release_date, score, popularity, genre, lbl_similar, lbl_casts, lbl_companies;
+    private TextView title, overview, release_date, score, popularity, genre, lbl_similar, lbl_casts, lbl_companies, tagline;
     private ProgressBar pbar;
 
     @Override
@@ -143,6 +143,7 @@ public class MovieDetailsFragment extends Fragment {
         popularity = view.findViewById(R.id.lbl_movie_details_popularity);
         release_date = view.findViewById(R.id.lbl_movie_details_release_date);
         genre = view.findViewById(R.id.lbl_movie_details_genres);
+        tagline = view.findViewById(R.id.lbl_movie_details_tagline);
 
         pbar = view.findViewById(R.id.pbar_movie_details);
 
@@ -230,6 +231,8 @@ public class MovieDetailsFragment extends Fragment {
                 CompanyAdapter adapter = new CompanyAdapter(getActivity());
                 adapter.setListCompanies(movie.getProduction_companies());
                 rv_company.setAdapter(adapter);
+                tagline.setText(movie.getTagline());
+                tagline.setVisibility(View.VISIBLE);
             }
         });
 
