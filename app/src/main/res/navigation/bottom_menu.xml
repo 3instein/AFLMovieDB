@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/bottom_menu"
+    app:startDestination="@id/NowPlayingFragment">
+
+    <fragment
+        android:id="@+id/NowPlayingFragment"
+        android:name="com.uc.aflmoviedb.view.fragments.NowPlayingFragment"
+        android:label="@string/now_playing"
+        tools:layout="@layout/fragment_now_playing" >
+        <action
+            android:id="@+id/action_NowPlayingFragment_to_movieDetailsFragment"
+            app:destination="@id/MovieDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/UpcomingFragment"
+        android:name="com.uc.aflmoviedb.view.fragments.UpcomingFragment"
+        android:label="@string/up_coming"
+        tools:layout="@layout/fragment_upcoming" >
+        <action
+            android:id="@+id/action_UpcomingFragment_to_movieDetailsFragment"
+            app:destination="@id/MovieDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/PopularFragment"
+        android:name="com.uc.aflmoviedb.view.fragments.PopularFragment"
+        android:label="fragment_popular"
+        tools:layout="@layout/fragment_popular" >
+        <action
+            android:id="@+id/action_PopularFragment_to_movieDetailsFragment"
+            app:destination="@id/MovieDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/MovieSearchFragment"
+        android:name="com.uc.aflmoviedb.view.fragments.MovieSearchFragment"
+        android:label="fragment_movie_search"
+        tools:layout="@layout/fragment_movie_search" >
+        <action
+            android:id="@+id/action_MovieSearchFragment_to_movieDetailsFragment"
+            app:destination="@id/MovieDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/MovieDetailsFragment"
+        android:name="com.uc.aflmoviedb.view.fragments.MovieDetailsFragment"
+        android:label="fragment_movie_details"
+        tools:layout="@layout/fragment_movie_details" />
+</navigation>
